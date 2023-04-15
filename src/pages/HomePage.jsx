@@ -27,7 +27,7 @@ const HomePage = () => {
     }
 
     const fetchServices = async () => {
-      const response = await fetch('https://exam.avavion.ru/api/services/');
+      const response = await fetch('https://flowers.avavion.ru/api/products');
       const data = await response.json();
   
       setPosts(data.data);
@@ -54,9 +54,9 @@ const HomePage = () => {
         <Post
           key={post.id}
           id={post.id}
-          image={post.image_url}
+          image={post.preview_image}
           name={post.name}
-          content={post.content}
+          content={post.text}
           price={post.price}
         /> 
       ))
